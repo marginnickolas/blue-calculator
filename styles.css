@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, white, lightblue);
+}
+
+#grid {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 70px);
+}
+
+#grid > button {
+    background-color: hsl(180, 100%, 97%);
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+}
+
+#grid > button:hover {
+    background-color: rgb(207, 241, 241);
+}
+
+.twoSpaces {
+    grid-column: span 2;
+}
+
+#output {
+    grid-column: 1/-1;
+    background-color: #262626;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 15px 15px 0px 0px; 
+}
+
+#currentOperand {
+    color: azure;
+    font-size: 25px;
+}
+
+#lastOperand {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.clear {
+    color: blue;
+}
