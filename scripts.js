@@ -1,18 +1,18 @@
 let operation = undefined
 let currentOperand = ``
 let lastOperand = ``
-const currentOperandTextElement = document.getElementByClassName("current-operand")
-const lastOperandTextElement = document.getElementByClassName("last-operand")
-const button = document.querySelectorAll(button)
+const currentOperandTextElement = document.getElementsByClassName("current-operand")
+const lastOperandTextElement = document.getElementsByClassName("last-operand")
+const button = document.querySelectorAll("button")
 const numberBtns = document.getElementsByClassName("number")
 const operationBtns = document.getElementsByClassName("operation")
-const clear = document.getElementByClassName("clear")
-const del = document.getElementByClassName("delete")
-const equals = document.getElementByClassName("equals")
+const clr = document.getElementsByClassName("clear")
+const del = document.getElementsByClassName("delete")
+const equals = document.getElementsByClassName("equals")
 
-button.addEventListener("click", function() {
+clr.addEventListener("click", function() {
     const btnValue = button.innertext
-    currentOperandTextElement.textContent += 1 
+    currentOperandTextElement.textContent = "4" 
 })
 
 function chooseOperation() {
