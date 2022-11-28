@@ -1,46 +1,45 @@
-let operation = undefined
-let currentOperand = ``
-let lastOperand = ``
-const currentOperandTextElement = document.getElementsByClassName("current-operand")
-const lastOperandTextElement = document.getElementsByClassName("last-operand")
-const button = document.querySelectorAll("button")
-const numberBtns = document.getElementsByClassName("number")
-const operationBtns = document.getElementsByClassName("operation")
-const clr = document.getElementsByClassName("clear")
-const del = document.getElementsByClassName("delete")
-const equals = document.getElementsByClassName("equals")
+class Caculator{
+    constructor(lastOperand, currentOperand) {
+        this.lastOperand = lastOperand
+        this.currentOperand = currentOperand
+        this.clear()
+    }
+    
+    chooseOperation(operation) {
 
-clr.addEventListener("click", function() {
-    const btnValue = button.innertext
-    currentOperandTextElement.textContent = "4" 
+    }
+
+    appendNumber(number) {
+
+    }
+
+    clear() {
+        this.lastOperand = ''
+        this.currentOperand = ''
+        this.operation = undefined
+    }
+
+    del() {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+
+    }
+} 
+
+const numberBtns = document.querySelectorAll(".number")
+const operationBtns = document.querySelectorAll(".operation")
+const clearBtn = document.querySelector(".clear")
+const delBtn = document.querySelector(".delete")
+const lastOperand = document.querySelector("#last-operand")
+const currentOperand = document.querySelector("#current-operand")
+const caculator = new Caculator(lastOperand, currentOperand)
+
+numberBtns.addEventListener("click", function() {
+    console.log(button.textContent)
 })
-
-function chooseOperation() {
-
-}
-
-function clear() {
-    let operation = undefined
-    let currentOperand = ``
-    let lastOperand = ``
-}
-
-function del() {
-
-}
-
-function caculate() {
-
-}
-
-function renderOperandText() {
-
-}
-
-function appendNumber() {
-
-}
-
-function updateDisplay() {
-
-}
