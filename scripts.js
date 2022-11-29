@@ -1,3 +1,5 @@
+'use strict'
+
 class Caculator{
     constructor(lastOperand, currentOperand) {
         this.lastOperand = lastOperand
@@ -10,7 +12,7 @@ class Caculator{
     }
 
     appendNumber(number) {
-
+        this.currentOperand = number
     }
 
     clear() {
@@ -28,18 +30,20 @@ class Caculator{
     }
 
     updateDisplay() {
-
+        this.currentOperand.textContent = this.currentOperand
     }
-} 
+}
 
-const numberBtns = document.querySelectorAll(".number")
 const operationBtns = document.querySelectorAll(".operation")
 const clearBtn = document.querySelector(".clear")
 const delBtn = document.querySelector(".delete")
 const lastOperand = document.querySelector("#last-operand")
 const currentOperand = document.querySelector("#current-operand")
 const caculator = new Caculator(lastOperand, currentOperand)
+const numberBtns = document.querySelectorAll(".number")
 
-numberBtns.addEventListener("click", function() {
-    console.log(button.textContent)
-})
+for (let i = 0; i < numberBtns.length; i++) {
+    numberBtns[i].addEventListener("click", function() {
+        //fix this
+    })
+}
