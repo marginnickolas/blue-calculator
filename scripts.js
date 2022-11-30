@@ -42,8 +42,10 @@ const currentOperand = document.querySelector("#current-operand")
 const caculator = new Caculator(lastOperand, currentOperand)
 const numberBtns = document.querySelectorAll(".number")
 
-for (let i = 0; i < numberBtns.length; i++) {
-    numberBtns[i].addEventListener("click", function() {
-        //fix this
+numberBtns.forEach(button => {
+    addEventListener("click", function() {
+        caculator.appendNumber(button.textContent)
+        caculator.updateDisplay
+        console.log("jjjj")
     })
-}
+})
